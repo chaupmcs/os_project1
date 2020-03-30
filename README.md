@@ -40,7 +40,6 @@ First of all, we implement two programs for Predictive analysis in time series. 
 
 ### Run the two programs simultaneously
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/simultaneously.png)
-
 ## Some noticeable comparisons
 The ***LSTM*** takes longer to finish when comparing with  ***MPL***.  In case running these programs concurrently, each program takes more time because there is more work for the CPU now. 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
