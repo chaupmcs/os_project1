@@ -7,14 +7,13 @@ The program is written in *python*. Make sure you have a *python 3* in your comp
 
  
 
-    $ cd SourceCode
     $ pip install -r requirements.txt
     
  ## Run the experiments
  Use *python "program_name"* to run the program. For example, to run *mpl.py*
  
-
-    $ python mpl.py
+     $ cd SourceCode
+     $ python mpl.py
 
 
 //add gif file
