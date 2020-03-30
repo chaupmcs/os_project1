@@ -30,7 +30,7 @@ In this project, we focus on these following aspects.
    - Number of page faults
 
 # Solution Design
-First of all, we implement two programs for Predictive analysis in time series. Concretely, the first program named ***LSTM*** employs LSTM networks whereas the other named ***MPL*** adopts MPL networks to predict the temperature of computers. The data is collected from HPCC dataset. We run and take measurements for these programs, and then compare the results.  In order to measure system-level information, we make use of package  [psutil](https://psutil.readthedocs.io/en/latest/) to carry out the experiments.  All the programs are written in python and were run on MacOS.
+First of all, we implement two programs for Predictive analysis in time series. Concretely, the first program named ***LSTM*** employs LSTM networks whereas the other named ***MPL*** adopts MPL networks to predict the temperature of computers. The data is collected from HPCC dataset. We run and take measurements for these programs, and then compare the results.  In order to measure system-level information, we make use of package  [psutil](https://psutil.readthedocs.io/en/latest/) to carry out the experiments.  All the programs are written in python and are run on MacOS.
 
 # Experimental Results
 ## Results
