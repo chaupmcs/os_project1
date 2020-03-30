@@ -1,14 +1,14 @@
 # Basic Usages
 
 ## Install packages
-The program is written in *python*. Make sure you have a *python 3* in your computer. You also need to install some requirement packages by using these following commands.
+The program is written in *python*. Make sure you have a *python3* in your computer. You also need to install some requirement packages by using these following commands.
 
 
     $ cd SourceCode
     $ pip install -r requirements.txt
     
  ## Run the experiments
- Use *python "program_name"* to run the program. For example, to run *mpl.py*
+ Use `python program_name` to run the program. For example, to run  file *mpl.py*
  
 
     $ python mpl.py
