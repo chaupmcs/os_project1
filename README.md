@@ -36,17 +36,14 @@ First of all, we implement two programs for Predictive analysis in time series. 
 ## Results
 
 ### Run each program separately 
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/separately.png)
 
 ### Run the two programs simultaneously
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/simultaneously.png)
 
 ## Some noticeable comparisons
-
+The ***LSTM*** takes longer to finish when comparing with  ***MPL***.  In case running these programs concurrently, each program takes more time because there is more work for the CPU now. 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
-<br/>
-<br/>
+<br>
+When it comes to CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantlly when we run the programs at the same time.
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
-<br/>
-<br/>
-![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/page_faults.png)
-
-# Conclusions
