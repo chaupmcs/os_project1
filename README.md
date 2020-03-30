@@ -46,10 +46,10 @@ First of all, we implement two programs for Predictive analysis in time series. 
 The ***LSTM*** takes longer to finish when comparing with  ***MPL***.  In case running these programs concurrently, each program takes more time because there is more work for the CPU now. 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
 <br>
-In terms of CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantly when we run the programs at the same time.
+In terms of CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantly when we run the two programs at the same time.
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
 
-The *Resident set size* (RSS), *Virtual memory size* (VMS),  *Unique Set Size* (USS - the memory unique to a process and which would be freed if the process was terminated right now) and Size on Hard Disk are almost the same in the two programs on both conditions. It is worth mentioning that we can see the *VMS* is much large than *RSS*.
+Besides, the *Resident set size* (RSS), *Virtual memory size* (VMS),  *Unique Set Size* (USS - the memory unique to a process and which would be freed if the process was terminated right now) and *Size on Hard Disk* are almost the same in the two programs on both conditions. It is worth mentioning that we can see the *VMS(s)* are much large than *RSS(s)*.
 
 In terms of *the number of Page-faults*, the number of ***LSTM*** is much smaller than that of ***MPL***, approximately one third. These figures are similar when running the two programs at the same time, just a slight smaller. 
 
