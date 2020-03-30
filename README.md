@@ -43,7 +43,9 @@ First of all, we implement two programs for Predictive analysis in time series. 
 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
 <br/>
+<br/>
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
+<br/>
 <br/>
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/page_faults.png)
 
