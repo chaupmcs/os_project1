@@ -37,15 +37,14 @@ First of all, we implement two programs for Predictive analysis in time series. 
 
 ### Run each program separately 
 
-
 ### Run the two programs simultaneously
 
 ## Some noticeable comparisons
 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
-
+<br>
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
-
+<br>
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/page_faults.png)
 
 # Conclusions
