@@ -9,7 +9,7 @@ The program is written in *python*. Make sure you have a *python3* in your compu
     $ pip install -r requirements.txt
     
  ## Run the experiments
- Use `python program_name` to run the program. We have two files namely *mpl.py* and *lstm.py*. For example, to run the former.
+ Use `python program_name` to run the program. We have two files named *mpl.py* and *lstm.py*. For example, to run the former.
  
 
     $ python mpl.py
@@ -31,7 +31,7 @@ In this project, we focus on these following aspects.
    - Number of page faults
 
 # Solution Design
-First of all, we implement two programs for Predictive analysis in time series. Concretely, the first program namely ***LSTM*** uses LSTM networks and the other named ***MPL*** adopts MPL networks to predict the temperature of computers. The data is collected from HPCC dataset. We run and take measurements for these programs.  In order to measure system-levelinformation, we make use of package  [psutil](https://psutil.readthedocs.io/en/latest/) to carry out the results.  All the programs are written in python and were run on MacOS.
+First of all, we implement two programs for Predictive analysis in time series. Concretely, the first program named ***LSTM*** uses LSTM networks and the other named ***MPL*** adopts MPL networks to predict the temperature of computers. The data is collected from HPCC dataset. We run and take measurements for these programs.  In order to measure system-levelinformation, we make use of package  [psutil](https://psutil.readthedocs.io/en/latest/) to carry out the results.  All the programs are written in python and were run on MacOS.
 
 # Experimental Results
 ## Results
