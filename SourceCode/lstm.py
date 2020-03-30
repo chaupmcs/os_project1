@@ -1,81 +1,48 @@
-import psutil
-import time
-print("Running LTSM...")
-t_start = time.time()
-p = psutil.Process()
-p.cpu_percent()
+# Basic Usages
+
+## Install packages
+The program is written in *python*. Make sure you have a *python 3* in your computer. You also need to install some requirement packages by using these following commands.
 
 
-import warnings
-warnings.filterwarnings('ignore')
-from keras import regularizers
-from keras.models import Sequential
-from keras.layers import LSTM
-from keras.layers import Dense
-from keras.layers import Activation
-from keras.layers import Dropout
-from keras.layers import Flatten
-from keras.optimizers import Adam
-import pandas as pd
-import numpy as np
-import json
-
+    $ cd SourceCode
+    $ pip install -r requirements.txt
     
-## model
-def createModel(l1Nodes, l2Nodes, d1Nodes, d2Nodes, inputShape):
-    # input layer
-    lstm1 = LSTM(l1Nodes, input_shape=inputShape, return_sequences=True)
-    lstm2 = LSTM(l2Nodes, return_sequences=True)
-    flatten = Flatten()
-    dense1 = Dense(d1Nodes)
-    dense2 = Dense(d2Nodes)
+ ## Run the experiments
+ Use *python "program_name"* to run the program. For example, to run *mpl.py*
+ 
 
-    outL = Dense(1)
-    # combine the layers
-    layers = [lstm1, lstm2, flatten,  dense1, dense2, outL]
-    # create the model
-    model = Sequential(layers)
-    opt = Adam(learning_rate=0.005)
-    model.compile(optimizer=opt, loss='mse')
-    return model
+    $ python mpl.py
+
+![enter image description here](https://github.com/chaupmcs/os_project1/blob/master/img/demo_mpl.gif?raw=true)
+
+# Problem Analysis
+This project aims to retrieve not only user-level, but also system-level information of pro-grams,  and  then  using  them  to  compare  two  algorithms  under  three  different  runningconditions:
+   - The first program only
+   - The second program only
+   - The two programs at the same time
 
 
+In this project, we focus on these following aspects.
+   - Running time of the program
+   - CPU usage
+   - Memory usage (Resident set size, Virtual memory size,...)
+   - Hard drive usage
+   - Number of page faults
 
-## data
-with open("../data/X_train_HPCC_1_20_312.json") as of:
-    X_train = np.array(json.load(of))
-with open("../data/y_train_HPCC_1_20_312.json") as of:
-    y_train = np.array(json.load(of))
-with open("../data/X_test_HPCC_1_20_312.json") as of:
-    X_test = np.array(json.load(of))
-with open("../data/y_test_HPCC_1_20_312.json") as of:
-    y_test = np.array(json.load(of))
-    
-model = createModel(8, 8, 8, 4, (X_train.shape[1], X_train.shape[2]))
-model.fit(X_train, y_train, batch_size=8, epochs=30, verbose=1)
-y_pred_prob = model.predict(X_test)[:,0]
-# print("mse:", mean_squared_error(y_test, y_pred_prob))
+# Solution Design
+First of all, we implement two programs for Predictive analysis in time series. Concretely, the first program name ***LSTM*** uses LSTM networks and the other named ***MPL*** adopts MPL networks to predict the temperature of computers. The data is collected from HPCC dataset. We run and take measurements for these programs.  In order to measure system-levelinformation, we make use of package psutil to carry out the results.  All the programs arewritten in python and were run on MacOS.
 
+# Experimental Results
+## Results
 
-mem = p.memory_full_info()
-print("full mem information:", mem)
-print('memory rss:', mem[0]/2.**30 , "GB")
-print('memory vms:', mem[1]/2.**30 , "GB")
-print('pfaults:', mem[2])
-print('pageins:', mem[3])
-print('memory uss:', mem[4]/2.**30 , "GB")
+### Run each program separately 
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/separately.png)
 
-print("cpu percent:", p.cpu_percent())
-print("cpu time:", p.cpu_times())
-
-
-
-import sys
-import subprocess
-x = subprocess.run(["du",  "-h", "lstm.py"],  stdout=subprocess.PIPE)
-encoding = "utf-8"
-print("size of the file in hard disk:", str.strip(x.stdout.decode(encoding)))
-
-
-t_end  = time.time()
-print("running time = {} seconds".format(np.round( t_end-t_start, 2)))
+### Run the two programs simultaneously
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/simultaneously.png)
+## Some noticeable comparisons
+The ***LSTM*** takes longer to finish when comparing with  ***MPL***.  In case running these programs concurrently, each program takes more time because there is more work for the CPU now. 
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
+<br>
+When it comes to CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantlly when we run the programs at the same time.
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
