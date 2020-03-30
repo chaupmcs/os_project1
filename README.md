@@ -46,11 +46,11 @@ First of all, we implement two programs for Predictive analysis in time series. 
 The ***LSTM*** takes longer to finish when comparing with  ***MPL***.  In case running these programs concurrently, each program takes more time because there is more work for the CPU now. 
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
 <br>
-When it comes to CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantlly when we run the programs at the same time.
+In terms of CPU Utilization, ***LSTM*** has better CPU percent. These numbers are dropped significantlly when we run the programs at the same time.
 ![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
 
 The *Resident set size* (RSS), *Virtual memory size* (VMS),  *Unique Set Size* (USS - the memory unique to a process and which would be freed if the process was terminated right now), and Size on Hard Disk are almost the same in the two programs on both conditions. It is worth mentioning that we can see the *VMS* is much large than *RSS*.
 
 In terms of *the number of Page-faults*, the number of ***LSTM*** is much smaller than that of ***MPL***, approximatelly one third. These figures are similar when running the two programs at the same time, just a slighty smaller. 
 
-*CPU time* is the time that the program use the CPU, which is the sum of *user  time*  (the program itself) and  *system time* (the time spent in kernel). In this experiment, we run the program on four cores, so the time here is the sum of CPU time on all the four cores. From the result, ***MPL*** obviously uses much less CPU than ***LSTM***. These figures are also similar when it comes to running simultaneously.
+*CPU time* is the time that the program uses the CPU, which is the sum of *user  time*  (the program itself) and  *system time* (the time spent in kernel). In this experiment, we run the program on four cores, so the time here is the sum of CPU time on all the four cores. From the result, ***MPL*** obviously uses much less CPU than ***LSTM***. These figures are also similar when it comes to running simultaneously.
