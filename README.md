@@ -5,13 +5,12 @@
 The program is written in *python*. Make sure you have a *python3* on your computer. You also need to install some required packages by using these following commands.
 
 
-    $ cd SourceCode
     $ pip install -r requirements.txt
     
  ## Run the experiments
  Use `python program_name` to run the program. We have two files namely *mpl.py* and *lstm.py*. For example, to run the former.
  
-
+    $ cd SourceCode
     $ python mpl.py
 
 ![enter image description here](https://github.com/chaupmcs/os_project1/blob/master/img/demo_mpl.gif?raw=true)
