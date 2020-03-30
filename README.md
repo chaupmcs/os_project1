@@ -17,7 +17,7 @@ The program is written in *python*. Make sure you have a *python3* in your compu
 ![enter image description here](https://github.com/chaupmcs/os_project1/blob/master/img/demo_mpl.gif?raw=true)
 
 # Problem Analysis
-This project aims to retrieve not only user-level, but also system-level information of programs,  and  then  using  them  to  compare  two  algorithms  under  three  different  runningconditions:
+This project aims to retrieve not only user-level, but also system-level information of programs,  and then using them to compare  two  algorithms  under  three  different  runningconditions:
    - The first program only
    - The second program only
    - The two programs at the same time
