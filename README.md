@@ -1,23 +1,19 @@
 # Basic Usages
 
-// add structure
-
 ## Install packages
 The program is written in *python*. Make sure you have a *python 3* in your computer. You also need to install some requirement packages by using these following commands.
 
- 
 
-     $ pip install -r requirements.txt
+    $ cd SourceCode
+    $ pip install -r requirements.txt
     
  ## Run the experiments
  Use *python "program_name"* to run the program. For example, to run *mpl.py*
  
-     $ cd SourceCode
-     $ python mpl.py
 
+    $ python mpl.py
 
-//add gif file
-
+![enter image description here](https://github.com/chaupmcs/os_project1/blob/master/img/demo_mpl.gif?raw=true)
 
 # Problem Analysis
 This project aims to retrieve not only user-level, but also system-level information of pro-grams,  and  then  using  them  to  compare  two  algorithms  under  three  different  runningconditions:
@@ -46,6 +42,10 @@ First of all, we implement two programs for Predictive analysis in time series. 
 
 ## Some noticeable comparisons
 
-// add chart
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/running_time.png)
+
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/cpu_percent.png)
+
+![enter image description here](https://raw.githubusercontent.com/chaupmcs/os_project1/master/img/page_faults.png)
 
 # Conclusions
