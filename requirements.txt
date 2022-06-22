@@ -6,7 +6,7 @@ Keras == 2.3.1
 
 # SourceCode/lstm.py: 20
 # SourceCode/mpl.py: 19
-numpy == 1.18.1
+numpy == 1.22.0
 
 # SourceCode/lstm.py: 19
 # SourceCode/mpl.py: 18
